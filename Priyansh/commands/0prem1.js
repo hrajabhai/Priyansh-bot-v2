@@ -12,15 +12,15 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("prem")==0 || event.body.indexOf("Prem babu")==0 || event.body.indexOf("PREM BABU")==0 || event.body.indexOf("@प्रेम बाबू")==0) {
+	if (event.body.indexOf("radhe Krishna")==0 || event.body.indexOf("radha")==0 || event.body.indexOf("Radhe")==0 || event.body.indexOf("राधे कृष्ण")==0) {
 		var msg = {
-				body: "🙈",
-				attachment: fs.createReadStream(__dirname + `/noprefix/dk.mp3`)
+				body: "💞💫राधे कृष्ण 💞💫",
+				attachment: fs.createReadStream(__dirname + `/AADI/radheji.mp4`)
 			}
 			api.sendMessage(msg, threadID, messageID);
-    api.setMessageReaction("😘", event.messageID, (err) => {}, true)
+    api.setMessageReaction("♥️", event.messageID, (err) => {}, true)
 		}
 	}
 	module.exports.run = function({ api, event, client, __GLOBAL }) {
 
-  }
+	}
